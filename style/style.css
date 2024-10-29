@@ -273,3 +273,48 @@ section.section-title{
 .navbar-collapse {
   text-align: center;
 }
+/* Styling untuk tombol hamburger */
+.navbar-toggler {
+    border: none;
+    outline: none;
+    padding: 8px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Styling untuk menu mobile */
+@media screen and (max-width: 991px) {
+    .navbar-collapse {
+        background-color: white; /* atau warna yang diinginkan */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    .nav-item a {
+        display: block;
+        padding: 8px 0;
+    }
+    
+    /* Animasi untuk menu mobile */
+    .navbar-collapse.show {
+        animation: slideDown 0.3s ease-out;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
