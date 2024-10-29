@@ -3,156 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:400;500;600;700;800&display=swap">
-    <style>
-        /* Add the previously formatted CSS code here */
-        /* Font */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:400;500;600;700;800&display=swap');
+    <title>PEMROGRAMAN WEB</title>
 
-        /* Variable */
-        :root {
-            --primary-color: #f86a27;
-            --dark-color: white;
-            --gray-color: gray;
-            --h1-font-size: 40px;
-            --h2-font-size: 32px;
-            --small-font-size: 14px;
-        }
-
-        /* Reset CSS */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        /* Navbar Styles */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-            background-color: #f8f9fa;
-        }
-
-        .navbar-brand {
-            height: 50px;
-            width: 40px;
-        }
-
-        .navbar-toggler {
-            border: none;
-            background: transparent;
-            outline: none;
-            padding: 8px;
-            cursor: pointer;
-        }
-
-        .navbar-toggler-icon {
-            width: 30px;
-            height: 3px;
-            background-color: black;
-            position: relative;
-            transition: 0.4s;
-        }
-
-        .navbar-toggler-icon::before,
-        .navbar-toggler-icon::after {
-            content: "";
-            width: 30px;
-            height: 3px;
-            background-color: black;
-            position: absolute;
-            transition: 0.4s;
-        }
-
-        .navbar-toggler-icon::before {
-            top: -10px;
-        }
-
-        .navbar-toggler-icon::after {
-            top: 10px;
-        }
-
-        .navbar-collapse {
-            display: none;
-            text-align: center;
-        }
-
-        .navbar-collapse.show {
-            display: block;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            animation: slideDown 0.3s ease-out;
-        }
-
-        .nav-item {
-            margin: 10px 0;
-        }
-
-        .nav-item a {
-            display: block;
-            color: black;
-            font-weight: 600;
-            text-transform: uppercase;
-            padding: 8px 0;
-            transition: color 0.4s;
-        }
-
-        .nav-item a:hover {
-            color: rgb(1, 143, 152);
-        }
-
-        @keyframes slideDown {
-            from {
-                transform: translateY(-10px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        /* Responsive Adjustments */
-        @media (min-width: 992px) {
-            .navbar-collapse {
-                display: flex !important;
-                justify-content: flex-end;
-            }
-            .navbar-toggler {
-                display: none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="vendors/bootstrep/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <a class="navbar-brand" href="#">
-            <!-- Logo -->
-            <img src="logo.png" alt="Logo">
-        </a>
-        <button class="navbar-toggler" onclick="toggleMenu()">
-            <div class="navbar-toggler-icon"></div>
-        </button>
-        <div class="navbar-collapse" id="navbarNav">
-            <div class="nav-item"><a href="#">Home</a></div>
-            <div class="nav-item"><a href="#">About</a></div>
-            <div class="nav-item"><a href="#">Services</a></div>
-            <div class="nav-item"><a href="#">Portfolio</a></div>
-            <div class="nav-item"><a href="#">Contact</a></div>
-        </div>
-    </nav>
+    <!-- NAVBAR -->
 
-    <script>
-        function toggleMenu() {
-            const navbarCollapse = document.getElementById('navbarNav');
-            navbarCollapse.classList.toggle('show');
-        }
-    </script>
+    <nav class="navbar navbar-expand-lg pb-3 ">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="./image/logo2.jpg" class="img-fluid" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#header">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#langganan">Langganan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+            </ul>
+          </div>
+        </div>
+      </nav> 
+
+      <!-- HEADER -->
+      <section class="header-section" id="header">
+        <!-- Video Background -->
+        <video autoplay muted loop class="header-video">
+            <source src="./image/videobg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    
+        <!-- Header Content -->
+        <div class="container position-relative z-1">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-6">
+                    <p class="text-orange fw-semibold">UTS PEMROGRAMAN WEB</p>
+                    <h1 class="header-title text-uppercase fw-bold mb-5">UNIVERSITAS ISLAM NAHDLATUL ULAMA JEPARA</h1>
+                    <a href="#" class="header-skill d-inline-flex align-items-center gap-2">
+                        RANDY EKA SAPUTRA <i class="bx bx-right-arrow-alt fs-4"></i>
+                    </a><br>
+                    <a href="#" class="header-skill d-inline-flex align-items-center gap-2">
+                        231240001371 <i class="bx bx-right-arrow-alt fs-4"></i>
+                    </a><br>
+                    <a href="#" class="header-skill d-inline-flex align-items-center gap-2">
+                        TEKNIK INFORMATIKA <i class="bx bx-right-arrow-alt fs-4"></i>
+                    </a><br>
+                    <a href="#" class="header-skill d-inline-flex align-items-center gap-2">
+                        FAKULTAS SAINS DAN TEKNOLOGI <i class="bx bx-right-arrow-alt fs-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+       <!-- PORTOFOLIO -->
+        <section class="portfolio" id="langganan">
+            <div class="container">
+                <p class="text-orange fw-semibold">LANGGANAN</p>
+                <h2 class="section-title text-uppercase fw-bold mb-5">KURSUS ONLINE</h2>
+
+                <div class="swiper portfolio-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="image/paket1.png" alt="" class="card-img-top rounded mb-3">
+                                    <h6 class="fw-semibold">Cyber Security</h6>
+                                    <a href="cyber.html" class="text-orange">Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="image/paket2.png" alt="" class="card-img-top rounded mb-3">
+                                    <h6 class="fw-semibold">Data Analytic</h6>
+                                    <a href="analytic.html" class="text-orange">Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="image/paket3.png" alt="" class="card-img-top rounded mb-3">
+                                    <h6 class="fw-semibold">Web Development</h6>
+                                    <a href="development.html" class="text-orange">Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-end gap-3 mt-3">
+                        <button class="btn btn-light d-flex align-items-center justify-content-center btn-next">
+                            <i class="bx bx-left-arrow-alt-fs-5"></i>
+                        </button>
+                        <button class="btn btn-light d-flex align-items-center justify-content-center btn-prev">
+                            <i class="bx bx-right-arrow-alt-fs-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+         <!-- Contact -->
+         <section class="portfolio-section" id="contact">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-md-6">
+                        <p class="text-orange fw-semibold">Contact</p>
+                        <h2 class="section-title text-uppercase fw-bold mb-5">CONTACT PERSON</h2>
+                        <p class="text-secondary mb-3"></p>
+                        <div class="d-flex align-item-center gap-2 mb-3">
+                            <i class="bx bx-map-pin text-orange fs-5"></i>
+                            <div class="mb-0">59456 Randy, Jepara, Jawa Tengah</div>
+                        </div>
+                        <div class="d-flex align-item-center gap-2 mb-3">
+                            <i class="bx bx-phone-call text-orange fs-5"></i>
+                            <div class="mb-0">+62 8224 4482 470</div>
+                        </div>
+                        <div class="d-flex align-item-center gap-2 mb-3">
+                            <i class="bx bx-envelope text-orange fs-5"></i>
+                            <div class="mb-0">rendyekasaputra2345@gamil.com</div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <form action="#">
+                            <input type="text" name="name" id="name" placeholder="Name" class="form-control rounded-0 mb-2">
+                            <input type="email" name="email" id="email" placeholder="Email" class="form-control rounded-0 mb-2">
+                            <textarea name="body" id="body" placeholder="Message" cols="30" rows="3" class="form-control rounded-0 mb-3"></textarea>
+                            <button class="btn btn-orange w-100">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+         </section>
+
+         <footer class="py-3">
+            <div class="container">
+                <p class="text-white fs-7 mb-0">Copyright & Copy; 2024 Randy Eka Saputra.</p> 
+            </div>
+         </footer>
+
+    <script src="Vendors/bootstrep/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
