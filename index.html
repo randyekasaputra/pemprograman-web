@@ -159,15 +159,16 @@
     <script src="Vendors/bootstrep/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".portfolio-swiper", {
-          slidesPerView: 3,
-          spaceBetween: 30,
-          navigation:{
-            nexEl:".btn-prev",
-            prevEl:".btn-nex",
-          }
-  }
-        );
-      </script>
+        // Pastikan untuk menunggu DOM sepenuhnya dimuat sebelum menjalankan script
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('#navbarSupportedContent');
+
+            toggler.addEventListener('click', function () {
+                // Toggle kelas 'show' pada navbar-collapse untuk menampilkan/menyembunyikan menu
+                navbarCollapse.classList.toggle('show');
+            });
+        });
+    </script>
 </body>
 </html>
