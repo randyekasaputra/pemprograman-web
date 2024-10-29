@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran</title>
+  <link rel="stylesheet" href="pendaftaran.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="form-wrapper">
+      <form action="" id="registrationForm">
+        <h2>Pendaftaran</h2>
+        
+        <!-- Name Field -->
+        <div class="input-group">
+          <input type="text" id="name" name="name" required>
+          <label for="name">Name</label>
+        </div>
+        
+        <!-- Email Field -->
+        <div class="input-group">
+          <input type="email" id="email" name="email" required>
+          <label for="email">Email</label>
+        </div>
+        
+        <!-- Password Field -->
+        <div class="input-group">
+          <input type="password" id="password" name="password" required>
+          <label for="password">Password</label>
+        </div>
+        
+        <!-- Subscription Package Dropdown -->
+        <!-- Subscription Package Dropdown -->
+        <div class="input-group dropdown">
+            <label for="package">Pilih Paket</label>
+            <select id="package" name="package" required>
+            <option value="" disabled selected>Pilih paket berlangganan</option>
+            <option value="basic"> Basic</option>
+            <option value="standard"> Premium</option>
+            <option value="premium"> Pro</option>
+            </select>
+        </div>
+        
+        <!-- Terms & Conditions Checkbox -->
+        <div class="remember">
+          <label>
+            <input type="checkbox" id="terms" required>
+            Syarat & Ketentuan
+          </label>
+        </div>
+        
+        <!-- Submit Button -->
+        <button type="submit">
+          <a href="index.html" style="color: white; text-decoration: none;"> Submit</a>
+          </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

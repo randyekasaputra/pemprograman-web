@@ -1,0 +1,272 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:400;500;600;700;800&display=swap');
+/*variable */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+p{
+  font-family: 'Montserrat',sans-serif;
+}
+.nav-item a{
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 15px;
+  transition: all 0.4s;
+  font-family: 'Montserrat',sans-serif;
+}
+.nav-item a:hover{
+  color: rgb(1, 143, 152);
+}
+.navbar-brand{
+  height: 50px;
+  width: 40px;
+}
+.search{
+  height: 45px;
+  outline: none;
+  border: 2px solid rgb(1, 143, 152);
+  background-color: transparent;
+  border-radius: 20px 0px 0px 20px;
+  border-right: none;
+}
+
+:root{
+    --primary-color:#f86a27;
+    --dark-color:white;
+    --gray-color:gray;
+
+    --h1-font-size: 40px;
+    --h2-font-size: 32px;
+    --small-font-size: 14px;
+}
+/* reset css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+/* global css */
+section{
+    padding: 70px 0;
+}
+section.section-title{
+    font-size: var(--h2-font-size);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.btn-orange{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-orange:hover{
+    background-color: var(--dark-color);
+    color: white;
+}
+
+.text-orange{
+    color: var(--primary-color);
+}
+.text-dark{
+    color: var(--dark-color);
+}
+.fs-7{
+    font-size: var(--small-font-size);
+}
+.form-control:focus{
+    box-shadow: none;
+    border-color:var(--primary-color) ;
+}
+/* css per section */
+
+/*navbar*/
+.navbar .nav-item .nav-link:hover,
+.navbar .navbar-item .nav-link.active{
+    color: var(--primary-color);
+}
+
+/* HEADER */
+.header-section .header-title{
+    font-size: var(--h1-font-size);
+}
+
+.header-section .header-skill{
+    color: var(--dark-color);
+}
+.header-section .header-skill:hover{
+    color: var(--primary-color);
+}
+.header-section .header-skill i{
+    transition: 0,3s;
+}
+.header-section .header-skill:hover i{
+    transform: rotate(-45deg);
+}
+
+.header-section .header-img{
+    width: 90%;
+}
+
+/*PORTFOLIO*/
+.portfolio-section .card .card-img-top{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+@media screen and(max-width: 768px){
+    .portfolio-section .card.card-img-top{
+        height: 100px;
+    }
+}
+
+/*SkillS*/
+.skills-section,footer{
+    background-color: #030304;
+}
+
+.skills-section .progress-bar{
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    background-color: var(--gray-color);
+}
+
+.skills-section .progress-bar .progress{
+    background-color: var(--primary-color);
+}
+
+  /* My Organisasi Section */
+.organisasi-box {
+    position: relative;
+    background-color: #0c6efd;
+    border-radius: 10px;
+    height: 500px;
+    transform-style: preserve-3d;
+  }
+  
+  .organisasi-box::before {
+    content: 'MY';
+    position: absolute;
+    color: #fff;
+    font-size: 6em;
+    font-weight: bold;
+    font-style: italic;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  .organisasi-box:hover::before {
+    opacity: 0.2;
+  }
+  
+  .organisasi-box::after {
+    content: 'ORGANISASI';
+    position: absolute;
+    color: #fff;
+    font-size: 4.3em;
+    font-weight: bold;
+    font-style: italic;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  .organisasi-box:hover::after {
+    opacity: 0.2;
+  }
+  
+  .organisasi-name {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+    opacity: 0;
+    transform: translate3d(0, 0, 50px);
+    transition: 0.5s;
+  }
+  
+  .organisasi-box:hover .organisasi-name {
+    top: 20px;
+    opacity: 1;
+  }
+  
+  .organisasi-detail-button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 100px);
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 3;
+  }
+  
+  .organisasi-box:hover .organisasi-detail-button {
+    opacity: 1;
+    bottom: 20px;
+  }
+  
+  .organisasi-img {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate3d(-50%, -52%, 80px);
+    max-width: 350px;
+    transition: 0.5s;
+    z-index: 2;
+  }
+  
+  .organisasi-box:hover .organisasi-img {
+    transform: translate3d(-50%, -52%, 100px) rotate(5deg) scale(1.2);
+  }
+
+  .header-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.header-section .container {
+    position: relative;
+    z-index: 1;
+    color: white; /* Ensures text stands out against the video */
+}
+
+/* Optional: Overlay to make text more readable */
+.header-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 0;
+}
