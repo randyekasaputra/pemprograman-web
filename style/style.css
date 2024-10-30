@@ -1,141 +1,134 @@
-/* font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:400;500;600;700;800&display=swap');
-/*variable */
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-p{
-  font-family: 'Montserrat',sans-serif;
-}
-.nav-item a{
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin-right: 15px;
-  transition: all 0.4s;
-  font-family: 'Montserrat',sans-serif;
-}
-.nav-item a:hover{
-  color: rgb(1, 143, 152);
-}
-.navbar-brand{
-  height: 50px;
-  width: 40px;
-}
-.search{
-  height: 45px;
-  outline: none;
-  border: 2px solid rgb(1, 143, 152);
-  background-color: transparent;
-  border-radius: 20px 0px 0px 20px;
-  border-right: none;
-}
-
-:root{
-    --primary-color:#f86a27;
-    --dark-color:white;
-    --gray-color:gray;
+/* Variables */
+:root {
+    --primary-color: #f86a27;
+    --dark-color: #ff4500;
+    --gray-color: gray;
 
     --h1-font-size: 40px;
     --h2-font-size: 32px;
     --small-font-size: 14px;
 }
-/* reset css */
-*{
+
+/* Reset CSS */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
-img{
+img {
     max-width: 100%;
 }
-a{
+a {
     text-decoration: none;
 }
-/* global css */
-section{
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Global Styles */
+section {
     padding: 70px 0;
 }
-section.section-title{
+.section-title {
     font-size: var(--h2-font-size);
     font-weight: bold;
     text-transform: uppercase;
-}
-.btn-orange{
-    background-color: var(--primary-color);
-    color: white;
+    color: var(--dark-color);
 }
 
-.btn-orange:hover{
+/* Button Styles */
+.btn-orange {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.btn-orange:hover {
     background-color: var(--dark-color);
     color: white;
 }
 
-.text-orange{
-    color: var(--primary-color);
+.mbtn1 {
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.3s ease;
 }
-.text-dark{
-    color: var(--dark-color);
+.mbtn1:hover {
+    background-color: #ff4500;
+    transform: translateY(-2px);
 }
-.fs-7{
-    font-size: var(--small-font-size);
-}
-.form-control:focus{
-    box-shadow: none;
-    border-color:var(--primary-color) ;
-}
-/* css per section */
 
-/*navbar*/
+.btn-next, .btn-prev {
+    width: 50px;
+    height: 50px;
+    background-color: #f8f9fa;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+.btn-next:hover, .btn-prev:hover {
+    background-color: #e9ecef;
+}
+
+/* Navbar */
+.navbar .nav-item .nav-link {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: 15px;
+    transition: color 0.4s;
+    font-family: 'Montserrat', sans-serif;
+}
 .navbar .nav-item .nav-link:hover,
-.navbar .navbar-item .nav-link.active{
+.navbar .nav-item .nav-link.active {
     color: var(--primary-color);
 }
-
-/* HEADER */
-.header-section .header-title{
-    font-size: var(--h1-font-size);
+.navbar-brand {
+    height: 50px;
+    width: 110px;
 }
 
-.header-section .header-skill{
-    color: var(--dark-color);
-}
-.header-section .header-skill:hover{
-    color: var(--primary-color);
-}
-.header-section .header-skill i{
-    transition: 0,3s;
-}
-.header-section .header-skill:hover i{
-    transform: rotate(-45deg);
-}
-
-.header-section .header-img{
-    width: 90%;
-}
-
-/*PORTFOLIO*/
-.portfolio-section .card .card-img-top{
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-}
-@media screen and(max-width: 768px){
-    .portfolio-section .card.card-img-top{
-        height: 100px;
-    }
-}
-
-  .header-section {
+/* Header Section */
+.header-section {
     position: relative;
     overflow: hidden;
+    color: white;
 }
-
+.header-section .header-title {
+    font-size: var(--h1-font-size);
+    color: white;
+}
+.header-section .header-skill {
+    color: var(--dark-color);
+}
+.header-section .header-skill:hover {
+    color: var(--primary-color);
+}
+.header-section .header-skill i {
+    transition: 0.3s;
+}
+.header-section .header-skill:hover i {
+    transform: rotate(-45deg);
+}
 .header-video {
     position: absolute;
     top: 0;
@@ -145,11 +138,9 @@ section.section-title{
     object-fit: cover;
     z-index: -1;
 }
-
 .header-section .container {
     position: relative;
     z-index: 1;
-    color: white; /* Ensures text stands out against the video */
 }
 
 /* Optional: Overlay to make text more readable */
@@ -160,6 +151,66 @@ section.section-title{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.4);
     z-index: 0;
 }
+
+/* Paket*/
+.langganan-section .card .card-img-top {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+    .langganan-section .card .card-img-top {
+        height: 100px;
+    }
+}
+
+/* Contact Section */
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+/* Footer */
+footer p {
+    color: var(--gray-color);
+    font-size: var(--small-font-size);
+}
+
+/* Media Demo Aplikasi */
+.media h2 {
+    margin-top: 40px;
+    font-weight: bold;
+  }
+  
+  .media img {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .media video {
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .h2{
+    color: #f86a27;
+  }
+/* Fitur*/
+.list h2 {
+    margin-top: 40px;
+    font-weight: bold;
+  }
+  
+  .list ul {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  .list ul li {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+  }
